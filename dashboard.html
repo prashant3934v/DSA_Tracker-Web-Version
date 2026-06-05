@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DSA Tracker Pro</title>
+
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <h1>Track your DSA</h1>
+    <p>Striver A2Z Progress Dashboard</p>
+
+    <h2 id="welcome">Welcome</h2>
+
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="card">Total<br><span id="total">0</span></div>
+    <div class="card">Solved<br><span id="solved">0</span></div>
+    <div class="card">Unsolved<br><span id="unsolved">0</span></div>
+    <div class="card">Progress<br><span id="progress">0%</span></div>
+  </section>
+
+  <!-- STREAK -->
+  <section class="streak-section">
+    <h2>Daily Goal</h2>
+
+    <div class="star-container">
+      <div class="star-outline">★</div>
+      <div class="star-fill" id="starFill">★</div>
+    </div>
+
+    <p><span id="dailySolved">0</span>/7 Questions Solved Today</p>
+  </section>
+
+  <!-- ADD PROBLEM -->
+  <section class="form-section">
+    <form id="problemForm">
+
+      <select id="leetcodeSelect">
+        <option value="">Loading problems...</option>
+      </select>
+
+      <select id="difficulty">
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+      </select>
+
+      <select id="status">
+        <option>Unsolved</option>
+        <option>Solved</option>
+      </select>
+
+      <button type="submit">Add Problem</button>
+
+    </form>
+  </section>
+
+  <!-- TABLE -->
+  <section class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Problem</th>
+          <th>Topic</th>
+          <th>Difficulty</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="problemList"></tbody>
+    </table>
+  </section>
+
+</div>
+
+<script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY — FIXED SCROLL ISSUE */
+body {
+  min-height: 100vh;
+  background: url("deer.png") no-repeat center center/cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  padding: 40px 0;
+}
+
+/* DARK OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+/* MAIN CONTAINER */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.142);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+header h1 {
+  font-size: 42px;
+  color: #1a3c5e;
+}
+
+header p {
+  color: #2c4a66;
+  margin-top: 5px;
+}
+
+#logoutBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card span {
+  font-size: 26px;
+  font-weight: bold;
+  display: block;
+  margin-top: 8px;
+}
+
+/* STREAK */
+.streak-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.star-container {
+  position: relative;
+  font-size: 80px;
+  width: 100px;
+  margin: 10px auto;
+}
+
+.star-outline {
+  color: #ddd;
+}
+
+.star-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  color: gold;
+}
+
+/* FORM */
+.form-section,
+.table-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* FORM CONTROLS */
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+select, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #1e7bbf;
+  color: white;
+  cursor: pointer;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    flex-direction: column;
+  }
+}
